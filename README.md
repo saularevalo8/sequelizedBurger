@@ -1,4 +1,4 @@
-# Eat-Da-Burger! 
+# Eat-Da-Burger using Sequelize! 
 
 ### Overview
 
@@ -19,8 +19,8 @@ This app will create a burger logger with MySQL, Node, Express, Handlebars and a
 The application is composed on the following structure:
 
 ├── config
-│   ├── connection.js
-│   └── orm.js
+│   └── config.json
+│   
 │ 
 ├── controllers
 │   └── burgers_controller.js
@@ -30,19 +30,20 @@ The application is composed on the following structure:
 │   └── seeds.sql
 │
 ├── models
-│   └── burger.js
-│ 
+│   ├── burger.js
+│ 	└── index.js
+│
 ├── node_modules
 │ 
 ├── package.json
 │
 ├── public
-│   ├── assets
-│   │   ├── css
-│   │   │   └── burger_style.css
-│   │   └── img
-│   │       └── burger.png
-│   └── test.html
+│   └── assets
+│       ├── css
+│       │   └── burger_style.css
+│       └── img
+│         └── burger.png
+│   
 │
 ├── server.js
 │

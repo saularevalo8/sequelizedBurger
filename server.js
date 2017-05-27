@@ -15,7 +15,7 @@ newApp.use(express.static(process.cwd() + "/public"));
 newApp.use(bodyParser.urlencoded({ extended: false }));
 
 // Override with POST having ?_method=DELETE
-//newApp.use(methodOverride("_method"));
+newApp.use(method("_method"));
 
 newApp.engine("handlebars", exphbs({ defaultLayout: "main" }));
 newApp.set("view engine", "handlebars");

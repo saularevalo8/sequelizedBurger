@@ -2,18 +2,18 @@ var express = require("express");
 
 var router = express.Router();
 
-// Import the model (app.js) to use its database functions.
+
 var model = require("../models");
 
 module.exports = function(app) {
-    // Create all our routes and set up logic within those routes where required.
+
     router.get("/", function(req, res) {
-        model.burger.findAll({}).then(function(dbBurgers) {
-                var hbsObject = {
-                    burgers: dbBurgers
+        model.burger.findAll({}).then(function(data) {
+                var burObject = {
+                    burgers: data
 
                 };
-                res.render("index", hbsObject);
+                res.render("index", burObject);
             }).catch(function(err) {
                 res.json(err)
             });
@@ -24,8 +24,8 @@ module.exports = function(app) {
 
             burger_name: req.body.burgerInput,
 
-            }).then(function(dbBurgers) {
-                // res.json(dbBurgers);
+            }).then(function(data) {
+                
                 res.redirect("/");
             })
     });
@@ -37,8 +37,8 @@ module.exports = function(app) {
                 where: {
                     id: req.params.id
                 }
-            }).then(function(dbBurgers) {
-                // res.json(dbBurgers);
+            }).then(function(data) {
+                
                 res.redirect("/");
             }).catch(function(err) {
                 res.json(err)
