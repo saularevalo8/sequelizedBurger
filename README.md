@@ -17,6 +17,8 @@ This app will create a burger logger with MySQL, Node, Express, Handlebars and a
 ### Directory structure
 
 The application is composed on the following structure:
+```
+.
 
 ├── config
 │   └── config.json
@@ -51,6 +53,8 @@ The application is composed on the following structure:
     ├── index.handlebars
     └── layouts
         └── main.handlebars
+```
+
 
 ### Technology Used
 * Javascript
@@ -59,3 +63,4 @@ The application is composed on the following structure:
 * MySQL
 * Handlebars
 * SequelPro
+* Sequelize
